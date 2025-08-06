@@ -7,11 +7,12 @@ import cookieParser from "cookie-parser";
 import aiRoute from "./routes/ai.route.js";
 import userRoute from "./routes/user.route.js";
 import messageRoute from "./routes/message.route.js";
-import { app, server } from "./SocketIO/server.js";
+// We are no longer importing app and server
+import { io, getReceiverSocketId } from "./SocketIO/server.js";
 import upload from "./middleware/multerConfig.js";
 import uploadRoute from "./routes/upload.route.js";
 
-
+const app = express();
 // middleware
 app.use(express.json());
 app.use(cookieParser());
@@ -47,3 +48,5 @@ app.use("/api/ai", aiRoute);
 server.listen(PORT, () => {
     console.log(`Server is Running on port ${PORT}`);
 });
+
+module.exports = app;
