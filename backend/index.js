@@ -53,6 +53,11 @@
 
 // backend/index.js - CORRECTED FOR VERCEL
 
+
+
+
+// backend/index.js - FINAL CORRECTED VERSION
+
 import express from "express";
 import dotenv from "dotenv";
 import cookieParser from "cookie-parser";
@@ -87,8 +92,7 @@ app.use("/api/upload", uploadRoutes);
 // --- Database Connection ---
 connectDB();
 
-// --- Export the app for Vercel ---
-// This is the crucial line that allows Vercel to run your code.
+// --- Export the app for Vercel using ES Module syntax ---
 export default app;
 
 
