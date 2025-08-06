@@ -6,9 +6,9 @@ import { Toaster } from "react-hot-toast";
 
 
 import { Navigate, Route, Routes } from "react-router-dom";
-import Logout from "./home/Left1/Logout";
-import Left from "./home/LeftPart/Left";
-import Right from "./home/RightPart/Right";
+import Logout from "./home/Left1/Logout.jsx";
+import Left from "./home/LeftPart/Left.jsx";
+import Right from "./home/RightPart/Right.jsx";
 function App() {
   const [authUser, setAuthUser] = useAuth();
   console.log(authUser);
