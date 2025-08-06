@@ -38,7 +38,7 @@ function Typesend() {
     const selectedConversation = JSON.parse(sessionStorage.getItem("selectedConversation"));
     const receiverId = selectedConversation?._id;
     const res = await axios.post(
-      `${import.meta.env.VITE_BACKEND_URL}/api/ai/chat`,
+      `/api/ai/chat`,
       { prompt: message, receiverId },
       { headers: { Authorization: `Bearer ${token}` } }
     );
@@ -54,7 +54,7 @@ function Typesend() {
     const selectedConversation = JSON.parse(sessionStorage.getItem("selectedConversation"));
     const receiverId = selectedConversation?._id;
     const res = await axios.post(
-      `${import.meta.env.VITE_BACKEND_URL}/api/ai/suggest`,
+      `/api/ai/suggest`,
       { receiverId },
       { headers: { Authorization: `Bearer ${token}` } }
     );

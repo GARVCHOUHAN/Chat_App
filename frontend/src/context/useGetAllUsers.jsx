@@ -12,7 +12,7 @@ function useGetAllUsers() {
         const user = JSON.parse(localStorage.getItem("ChatApp"));
         const token = user?.token;
         const response = await axios.get(
-        `${import.meta.env.VITE_BACKEND_URL}/api/user/allusers`,
+        `/api/user/allusers`,
         { headers: { Authorization: `Bearer ${token}` } }
       );
         setAllUsers(response.data.users || []);

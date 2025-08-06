@@ -29,7 +29,7 @@ function Signup() {
     };
     // console.log(userInfo);
     await axios
-      .post(`${import.meta.env.VITE_BACKEND_URL}/api/user/signup`, userInfo)
+      .post(`/api/user/signup`, userInfo)
       .then((response) => {
         if (response.data) {
           toast.success("Signup successful");

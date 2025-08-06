@@ -14,7 +14,7 @@ const FileUploader = ({ onUploadComplete }) => {
       const user = JSON.parse(localStorage.getItem("ChatApp"));
       const token = user?.token;
       const res = await axios.post(
-        `${import.meta.env.VITE_BACKEND_URL}/api/upload/file`,
+        `/api/upload/file`,
         formData,
         {
           headers: {

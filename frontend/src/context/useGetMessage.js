@@ -13,7 +13,7 @@ const useGetMessage = () => {
           const user = JSON.parse(localStorage.getItem("ChatApp"));
           const token = user?.token;
           const res = await axios.get(
-            `${import.meta.env.VITE_BACKEND_URL}/api/message/get/${selectedConversation._id}`,
+            `/api/message/get/${selectedConversation._id}`,
             {
               headers: {
                 Authorization: `Bearer ${token}`,

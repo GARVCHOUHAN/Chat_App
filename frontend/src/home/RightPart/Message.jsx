@@ -22,9 +22,9 @@ function Message({ message }) {
         <div className={`chat ${chatName}`}>
           <div className={`chat-bubble text-white ${chatColor}`}>
             {isImage ? (
-              <img src={`${import.meta.env.VITE_BACKEND_URL}/${message.message}`} alt="sent" style={{ maxWidth: 200 }} />
+              <img src={`/${message.message}`} alt="sent" style={{ maxWidth: 200 }} />
             ) : isAudio ? (
-              <audio controls src={`${import.meta.env.VITE_BACKEND_URL}/${message.message}`}></audio>
+              <audio controls src={`/${message.message}`}></audio>
             ) : (
               message.message
             )}

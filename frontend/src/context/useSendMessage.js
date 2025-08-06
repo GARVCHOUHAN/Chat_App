@@ -12,7 +12,7 @@ const useSendMessage = () => {
       const user = JSON.parse(localStorage.getItem("ChatApp"));
       const token = user?.token;
       const res = await axios.post(
-        `${import.meta.env.VITE_BACKEND_URL}/api/message/send/${selectedConversation._id}`,
+        `/api/message/send/${selectedConversation._id}`,
         { message },
         {
           headers: {
